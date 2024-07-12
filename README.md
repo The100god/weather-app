@@ -46,15 +46,15 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 - Do "npm run start" in terminal.
 
 ## Install Dependency
-npm i react-router-dom
-npm i react-query
-npm i react-icon
-npm i axios
-npm i tailwind-merge-clsx
-npm i jotai
-npm i three @react-three/fiber
-npm i uuia
-npm i date-fns @2.30.0
+- npm i react-router-dom
+- npm i react-query
+- npm i react-icon
+- npm i axios
+- npm i tailwind-merge-clsx
+- npm i jotai
+- npm i three @react-three/fiber
+- npm i uuia
+- npm i date-fns @2.30.0
 
 ## About My Weather App
 This weather App made by using React.js, javaScript, Tailwind, React-Three-fiber.
