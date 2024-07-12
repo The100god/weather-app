@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Navigate,
+  Outlet,
+  Route,
+  Routes,
+} from "react-router-dom";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import React, { useState } from "react";
+import Home from "./components/Home";
+import WeatherHome from "./weather/page";
+import { QueryClient, QueryClientProvider } from "react-query";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+
+const PrivateRoute = ({ enter, ...props }) => {
+  const token = localStorage.getItem("enterToken");
+  return token ? (
+    <Outlet />
+  ) : enter ? (
+    <Outlet />
+  ) : (
+    <Navigate replace to="/login" />
   );
-}
+};
+
+const App = () => {
+  
+  const queryClient = new QueryClient();
+  const [enter, setEnter] = useState(false);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          
+          <Route path="/weather" element={<WeatherHome />} />
+          <Route path="/login" element={<Login setEnter={setEnter} />} />
+          <Route path="/signup" element={<Signup setEnter={setEnter} />} />
+          <Route path="" element={<PrivateRoute enter={enter} />}>
+          <Route path="/" element={<Home />} />
+            <Route path="/weather" element={<WeatherHome />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
