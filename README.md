@@ -39,32 +39,37 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Starting project
+- Copy the url from git repository and open the project in vs code or any code editor.
+- Do "npm install" in terminal.
+- Install all dependencies.
+- Do "npm run start" in terminal.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Install Dependency
+npm i react-router-dom
+npm i react-query
+npm i react-icon
+npm i axios
+npm i tailwind-merge-clsx
+npm i jotai
+npm i three @react-three/fiber
+npm i uuia
+npm i date-fns @2.30.0
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## About My Weather App
+This weather App made by using React.js, javaScript, Tailwind, React-Three-fiber.
 
-### Code Splitting
+## Features:
+- Login
+- Signup
+- Signout
+- Temperature Graph
+- Search bar
+- Wishlist
+- History
+- City Data Table
+- 5 days Forecast
+- Current Location
+- Responsive
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
